@@ -1,3 +1,99 @@
+:root {
+    --primary-color: brown;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    font-family: cursive;
+}
+
 body {
-    background-color: aqua;
+    background-image: url(../images/beans.jpg);
+    background-size: cover;
+}
+
+.page-container {
+    display: grid;
+    grid-template-rows: 1fr 7fr;
+    height: 100vh;
+}
+
+header {
+    background-color: white;
+    display: flex;
+    /* align-items: stretch; */
+}
+
+#icon {
+    background-image: url(../images/beans-icon.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 60px;
+    width: 60px;
+}
+
+.header-title {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.5rem;
+    padding-left: 10px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    gap: 5px;
+    flex: 1;
+}
+
+button {
+    color: white;
+    background-color: var(--primary-color);
+    height: 30px;
+    width: 20%;
+    border: 3px solid var(--primary-color);
+    border-bottom: none;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button.active {
+    color: var(--primary-color);
+    background-color: white;
+    width: 20%;
+    border: 3px solid var(--primary-color);
+    border-bottom: none;
+}
+
+button:active {
+    border-left: 3px solid white;
+    border-top: 3px solid white;
+    border-right: 3px solid white;
+    font-size: 14px;
+}
+
+#content {
+    display: flex;
+    justify-content: center;
+}
+
+.main-container {
+    margin-top: 20px;
+    width: 90%;
+    height: fit-content;
+    display: grid;
+    justify-content: center;
+    background-color: var(--primary-color);
+}
+
+span {
+    font-style: italic;
 }
