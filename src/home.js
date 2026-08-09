@@ -1,7 +1,8 @@
 // create home page layout
 function loadHomePage(){
     const contentDiv = document.getElementById('content');
-
+    // erase current content elements
+    contentDiv.textContent = "";
     // HOME PAGE LOAD
     // create div
     const containerDiv = document.createElement('div');
